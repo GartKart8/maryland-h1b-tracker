@@ -10,7 +10,7 @@ L.maplibreGL({
     attribution: '<a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> <a href="https://www.openmaptiles.org/" target="_blank">© OpenMapTiles</a> Data from <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
 }).addTo(map);
 
-fetch('data/maryland.geojson')
+fetch('assets/data/maryland.geojson')
   .then(response => response.json())
   .then(geoData => {
     L.geoJSON(geoData).addTo(map);
