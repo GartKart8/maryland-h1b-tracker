@@ -1,0 +1,94 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;  
+}
+img {max-width:100%;}
+h1,h2,h3{
+    font-size: 3rem;
+    font-style: italic;
+}
+#map {
+    height: 720px;
+    max-width: 100%;
+    width: 1280px;
+    place-self: center;
+}
+
+#hero{
+    min-height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    background-image: url("../img/md-flag-bg.png");
+    background-position: center;
+}
+
+#hero #title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #23427d;
+    text-align: center;
+}
+
+#hero h1{z-index:20;color:white;font-size: 4rem;}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 56;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: 1; /* Ensure overlay is above image but below text */
+}
+
+#hero #hero-image{
+    display: flex;
+}
+
+#content-title {
+    background: #981e32;
+    color: white;
+    min-height: 80px;
+    scroll-margin-top: 100px;
+}
+
+#content-title > .col {
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    font-size:2rem;
+}
+
+#footer {
+    background: #11213e;
+    color: white;
+    margin-top: 60px;
+    padding:60px 0;
+    height: 300px;
+    text-align: center;
+    align-content: center;
+}
+
+.leaflet-popup-content > h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.leaflet-popup-content > p#em-address {
+    margin-top: 0;
+}
+.leaflet-popup-content > table{
+    font-size: 0.75rem;
+    width: 100%;
+}
+.leaflet-popup-content > table > tbody > #tbl-header{
+    border-bottom: 1px solid #981e32;
+}

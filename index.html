@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <!-- Character encoding (almost always the first thing) -->
+        <meta charset="UTF-8">
+
+        <!-- Makes the page responsive on phones/tablets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Page title (shows in the browser tab) -->
+        <title>Maryland H-1B Tracker</title>
+
+        <!-- Optional but useful -->
+        <meta name="description" content="Interactive map of H-1B usage in Maryland">
+        <meta name="author" content="Your Name">
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BOOTSTRAP -->
+        <link href="assets\bootstrap-5.3.8-dist\css\bootstrap.min.css" rel="stylesheet">
+        <script src="assets\bootstrap-5.3.8-dist\js\bootstrap.bundle.min.js"></script>
+
+        <!-- LEAFLET -->
+        <link rel="stylesheet" href="assets\leaflet\leaflet.css">
+        <script src="assets\leaflet\leaflet.js"></script>
+
+        <!-- LEAFLET.MARKERCLUSTER -->
+        <link rel="stylesheet" href="assets\Leaflet.markercluster-1.4.1\dist\MarkerCluster.css">
+        <link rel="stylesheet" href="assets\Leaflet.markercluster-1.4.1\dist\MarkerCluster.Default.css ">
+        <script src="assets\Leaflet.markercluster-1.4.1\dist\leaflet.markercluster.js"></script>
+
+        <!-- Maplibre GL -->
+        <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+        <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+
+        <!-- Maplibre GL Leaflet  -->
+        <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet/leaflet-maplibre-gl.js"></script>
+
+        <!-- MINE -->
+        <link rel="stylesheet" href="assets\css\styles.css">
+
+        <!-- Favicon (optional) -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#content-title">Intro</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#map">Tracker</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </nav>
+        </header>
+        <div id="hero">
+            <div class="container-fluid g-0">
+                <div id="title">
+                    <h1><em>Maryland<br>H-1B Tracker</em></h1>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <div class="row" id="content-title" style="margin-bottom:10px;">
+                    <div class="col">
+                        <h2 style="margin-top: .5rem;">Maryland Deserves to Know</h2>
+                    </div>
+                </div>
+                
+                <div class="row g-0" id="content">
+                    <div class="col">
+                        <h3>H-1B Data</h3>
+                        <p>The United States Department of Labor houses <a href="https://www.dol.gov/agencies/eta/foreign-labor/performance" target="_blank">data on H-1B employment</a>. This data is in the form of Excel Spreadsheets per year. The spreadsheets include employer, SOC (Standard Occupational Classification), worksite, wage, and so much more. It's information overload opening one of these spreadsheets and trying to figure out what data is relavant.</p>
+                            
+                        <p>The United States Citizenship and Immigration Services has an <a href="https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub" target="_blank">H-1B Employer Data Hub</a>, which provides a heat map and a bar chart of approved visas per employer and per state. This is helpful compared to the Department of Labor's spreadsheets. However, it still doesn't illustrate the state-to-state data well enough.</p>
+                        
+                        <h3>Accessible State Data</h3>
+                        <p>Inspired by <a href="https://strongborders.org/h-1b-tracker/" target="_blank">Texans for Strong Borders</a>, I decided to create an interactive map with more detailed data on H-1B visa usage in Maryland. This data isn't just the number of approved visas from the top 100 employers in the United States; this data is pulled from the Department of Labor's spreadsheets to provide the names of all employers in Maryland that applied for H-1B visas since the data started being recorded. This map shows the density of H-1B usage per area in Maryland.</p>
+
+                        <p>Whether you agree with the H-1B visa or not, you deserve to know how the visa is being used by your government. You deserve to have the data readily available and easily accessible and understandable. You deserve to know the employers applying for large amounts of H-1B visas and why they need those visas. I believe in transparency and you should too.</p>
+
+                        <h3>Tracker Status</h3>
+                        <p>The tracker is not complete. Like I said eariler, I believe in transparency. I don't know when I will complete it, but the tracker only has the H-1B data for two years (Fiscal Years 2024 and 2025). The Department of Labor has spreadsheets with data dating back to 2008, so I hope to eventually add all of that data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div id="map"></div>
+        </div>
+    </body>
+    <footer id="footer">
+        <h2>Thank you</h2>
+        <p><em>A transparent Government is a Government that can be held accountable</em></p>
+        <script src="assets\js\map.js"></script>
+    </footer>
+</html>
