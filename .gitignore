@@ -1,0 +1,25 @@
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Node (just in case)
+node_modules/
+
+# Large or temporary data files (optional – remove if you want to keep them)
+# *.csv
+# data/raw/
